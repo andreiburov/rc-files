@@ -1,0 +1,30 @@
+# keep scrollback n lines
+defscrollback 5000
+# tab-completion flash in heading bar
+vbell off
+# don't display the copyright page
+startup_message off
+# navigation
+bindkey -k k1 select 0  #  F1 = screen 1
+bindkey -k k2 select 1  #  F2 = screen 2
+bindkey -k k3 select 2  #  F3 = screen 3
+bindkey -k k4 select 3  #  F4 = screen 4
+bindkey -k k5 select 4  #  F5 = screen 5
+bindkey -k k6 select 5  #  F6 = screen 6
+bindkey -k k7 select 6  #  F7 = screen 7
+bindkey -k k8 select 7  #  F8 = screen 8
+bindkey -k k9 select 8  #  F9 = screen 9
+bindkey "^[[23~" prev
+bindkey "^[[24~" next
+# hardstatus
+hardstatus alwayslastline
+hardstatus string "%{= KW} %H [%`] %{= Kw}|%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw %=%C%a %Y-%M-%d"
+# caption
+#caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %c"
+
+shelltitle "cardamom"
+screen bash
+screen -t root su -
+screen -t vim vim
+screen -t man man man
+screen -t irc irssi
