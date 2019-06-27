@@ -32,6 +32,11 @@ call plug#end()
 syntax enable
 
 set mouse=a
+" Connects vim yank/paste with system clipboard
+set clipboard=unnamedplus
+" Prevent x from overriding the clipboard
+noremap x "_x
+noremap X "_X
 
 " Tab and Indent configuration
 set expandtab
